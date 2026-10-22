@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Off Record – Private Chauffeurs</title>
+<meta name="description" content="Off Record – discreet private chauffeurs for artists and private clients. Zurich · Engadin. Launching summer 2027.">
+<link rel="canonical" href="https://offrecord.ch/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0A101A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://offrecord.ch/">
+<meta property="og:title" content="Off Record – Private Chauffeurs">
+<meta property="og:description" content="We only drive artists. Discreet private chauffeurs, Zurich · Engadin.">
+<meta property="og:image" content="https://offrecord.ch/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/HankenGrotesk-var.woff" as="font" type="font/woff" crossorigin>
+<style>
+@font-face{font-family:'Hanken Grotesk';src:url(/fonts/HankenGrotesk-var.woff) format('woff');font-weight:100 900;font-style:normal;font-display:swap}
+:root{--bg:#0A101A;--card:#111A28;--text:#EEEAE3;--soft:#AEB2B8;--muted:#8A919C;--line:#1B2636;--line2:#2A3850;--btn:#3D4B60;--red:#E5484D}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--text);text-decoration:none}a:hover{color:var(--soft)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px}
+header.wrap{padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;margin-right:auto}
+.logo span{font-weight:500;font-size:15px;letter-spacing:.34em}
+.langs{display:flex;gap:4px}
+.langs button{background:transparent;border:none;cursor:pointer;font:inherit;font-size:13px;letter-spacing:.12em;min-width:44px;min-height:44px;padding:0 8px;color:var(--muted)}
+.langs button[aria-pressed="true"]{color:var(--text);text-decoration:underline;text-underline-offset:6px}
+.langs button:hover{color:var(--text)}
+.btn{background:transparent;color:var(--text);cursor:pointer;font:inherit;font-size:14px;letter-spacing:.06em;border:1px solid var(--btn);padding:12px 20px;min-height:44px;display:inline-flex;align-items:center}
+.btn:hover{border-color:var(--muted)}
+.hero{padding-top:120px;padding-bottom:140px;display:flex;flex-direction:column;gap:32px}
+.eyebrow{margin:0;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+h1{margin:0;font-weight:300;line-height:1.05;letter-spacing:-.02em;font-size:clamp(44px,6.8vw,96px)}
+@media (min-width:900px){html:not([lang="fr"]) h1{white-space:nowrap}}
+.lead{margin:0;max-width:600px;font-size:18px;color:var(--soft)}
+.lead2{margin:0;max-width:600px;font-size:14px;letter-spacing:.04em;color:var(--muted)}
+.rule{border-top:1px solid var(--line)}
+.cols{padding-top:96px;padding-bottom:96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px}
+.col{display:flex;flex-direction:column;gap:12px}
+.col .mark{width:24px;height:1px;background:var(--muted);margin-bottom:10px}
+.col h2{margin:0;font-weight:400;font-size:26px;letter-spacing:-.01em}
+.col p{margin:0;color:var(--soft);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.contact{padding-top:112px;padding-bottom:112px;display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.contact h2{margin:0;font-weight:300;font-size:clamp(30px,4.3vw,50px);line-height:1.15;letter-spacing:-.015em;max-width:22ch}
+.contact .lines{display:flex;flex-direction:column;gap:4px;font-size:17px}
+footer .wrap{padding-top:32px;padding-bottom:32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+.foot-right{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:center}
+.linkbtn{background:transparent;border:none;padding:0;min-height:44px;cursor:pointer;color:var(--muted);font:inherit;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+.linkbtn:hover{color:var(--text)}
+.langs-foot{display:none;width:100%;margin:8px 0 0 -8px}
+@media (max-width:600px){header .langs{display:none}.langs-foot{display:flex}}
+.overlay{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px}
+.overlay[hidden]{display:none}
+.backdrop{position:absolute;inset:0;width:100%;height:100%;border:none;padding:0;background:rgba(3,6,11,.8);cursor:pointer;animation:orFade .45s ease-out both}
+.panel{position:relative;width:100%;background:var(--card);color:var(--text);border:1px solid var(--line2);box-shadow:0 30px 80px rgba(0,0,0,.55);animation:orCardIn .65s cubic-bezier(.2,.7,.2,1) both}
+.card{max-width:480px;aspect-ratio:85/55;padding:30px 34px;display:flex;flex-direction:column;justify-content:space-between}
+.card .big{display:flex;flex-direction:column;gap:4px;font-size:clamp(18px,5vw,24px);font-weight:300;letter-spacing:-.005em}
+.card .who{border-top:1px solid var(--line2);padding-top:14px;font-size:12px;letter-spacing:.04em;color:var(--muted)}
+.legal{max-width:560px;max-height:85vh;overflow-y:auto;padding:30px 34px 34px;display:flex;flex-direction:column;gap:22px;font-size:14px;line-height:1.65}
+.legal h2{margin:0;font-weight:400;font-size:20px}
+.legal .addr{display:flex;flex-direction:column;color:var(--soft)}
+.legal .sep{border-top:1px solid var(--line2);padding-top:22px;display:flex;flex-direction:column;gap:10px}
+.legal p{margin:0;color:var(--soft);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand span{font-weight:500;font-size:12px;letter-spacing:.34em}
+.close{background:transparent;border:none;cursor:pointer;min-width:44px;min-height:44px;margin:-14px -14px 0 0;display:inline-flex;align-items:center;justify-content:center}
+@keyframes orFade{from{opacity:0}to{opacity:1}}
+@keyframes orCardIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.backdrop,.panel{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+<a href="#top" class="logo" aria-label="Off Record">
+<svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="#E5484D" stroke-width="1"/><circle cx="11" cy="11" r="6" fill="#E5484D"/></svg>
+<span>OFF RECORD</span>
+</a>
+<nav class="langs" aria-label="Language"></nav>
+<button type="button" class="btn" data-open="card" aria-haspopup="dialog" data-i18n="contact">Contact</button>
+</header>
+
+<main>
+<section id="top" class="wrap hero">
+<p class="eyebrow" data-i18n="eyebrow">Zurich · Engadin · Launching summer 2027</p>
+<h1 data-i18n="h1">We only drive artists.</h1>
+<p class="lead" data-i18n="lead">Some play stages. Others build companies, close deals or simply know how they want to arrive. Whoever sits in the back, we drive an artist.</p>
+<p class="lead2" data-i18n="lead2">What happens on the road stays off record – unless you decide otherwise.</p>
+</section>
+
+<section class="rule">
+<div class="wrap cols">
+<div class="col"><div class="mark" aria-hidden="true"></div><h2 data-i18n="s1h">The artist standard</h2><p data-i18n="s1p"></p></div>
+<div class="col"><div class="mark" aria-hidden="true"></div><h2 data-i18n="s2h">For promoters &amp; venues</h2><p data-i18n="s2p"></p></div>
+<div class="col"><div class="mark" aria-hidden="true"></div><h2 data-i18n="s3h">For other artists</h2><p data-i18n="s3p"></p></div>
+</div>
+</section>
+
+<section id="contact" class="rule">
+<div class="wrap contact">
+<h2 data-i18n="closing">Planning the 2027 season? Let's talk before the first flight lands.</h2>
+<div class="lines">
+<a href="mailto:federico@offrecord.ch">federico@offrecord.ch</a>
+<a href="tel:+41765763339">+41 76 576 33 39</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="rule">
+<div class="wrap">
+<span data-i18n="footer">Off Record Private Chauffeurs · Zurich</span>
+<span class="foot-right"><button type="button" class="linkbtn" data-open="legal" aria-haspopup="dialog" data-l="link">Imprint &amp; Privacy</button><span>© 2026</span></span>
+<nav class="langs langs-foot" aria-label="Language"></nav>
+</div>
+</footer>
+
+<div class="overlay" id="card" role="dialog" aria-modal="true" aria-label="Off Record – Contact" hidden>
+<button type="button" class="backdrop" data-close data-c="close" aria-label="Close"></button>
+<div class="panel card">
+<div class="top">
+<div class="brand"><svg width="16" height="16" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="none" stroke="#E5484D" stroke-width="1.2"/><circle cx="11" cy="11" r="6" fill="#E5484D"/></svg><span>OFF RECORD</span></div>
+<button type="button" class="close" data-close data-c="close" aria-label="Close"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1 L13 13 M13 1 L1 13" stroke="#8A919C" stroke-width="1.2" fill="none"/></svg></button>
+</div>
+<div class="big">
+<a href="mailto:federico@offrecord.ch">federico@offrecord.ch</a>
+<a href="tel:+41765763339">+41 76 576 33 39</a>
+</div>
+<div class="who">Federico Supino · <span data-c="role">Founder</span> · <span data-i18n="footer">Off Record Private Chauffeurs · Zurich</span></div>
+</div>
+</div>
+
+<div class="overlay" id="legal" role="dialog" aria-modal="true" aria-label="Imprint &amp; Privacy" hidden>
+<button type="button" class="backdrop" data-close data-c="close" aria-label="Close"></button>
+<div class="panel legal">
+<div class="top">
+<h2 data-l="imprint">Imprint</h2>
+<button type="button" class="close" data-close data-c="close" aria-label="Close"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1 L13 13 M13 1 L1 13" stroke="#8A919C" stroke-width="1.2" fill="none"/></svg></button>
+</div>
+<div class="addr">
+<span>Off Record Private Chauffeurs</span>
+<span>Federico Supino</span>
+<span data-l="place">8008 Zurich, Switzerland</span>
+<a href="mailto:federico@offrecord.ch" style="margin-top:8px">federico@offrecord.ch</a>
+<a href="tel:+41765763339">+41 76 576 33 39</a>
+</div>
+<div class="sep">
+<h2 data-l="privacy">Privacy</h2>
+<p data-l="privacyText"></p>
+</div>
+</div>
+</div>
+
+<script>
+var COPY = {
+  en: {
+    contact: "Contact",
+    eyebrow: "Zurich · Engadin · Launching summer 2027",
+    h1: "We only drive artists.",
+    lead: "Some play stages. Others build companies, close deals or simply know how they want to arrive. Whoever sits in the back, we drive an artist.",
+    lead2: "What happens on the road stays off record – unless you decide otherwise.",
+    s1h: "The artist standard",
+    s1p: "Artists travel on schedules where nothing may go wrong. That is the standard Off Record is built on: your flight is tracked, the car is there before you land, and you never wait for us – not even at 4 a.m.",
+    s2h: "For promoters & venues",
+    s2p: "We handle every artist ride of the night: airport, hotel, venue and back. One contact for your team, a run sheet per artist, live location and a backup driver on call.",
+    s3h: "For other artists",
+    s3p: "Business trips, holidays, club nights, festivals or a special occasion. Zurich, St. Moritz, anywhere in Switzerland and across the border – the same standard on every ride.",
+    closing: "Planning the 2027 season? Let's talk before the first flight lands.",
+    footer: "Off Record Private Chauffeurs · Zurich"
+  },
+  de: {
+    contact: "Kontakt",
+    eyebrow: "Zürich · Engadin · Start im Sommer 2027",
+    h1: "Wir fahren nur Artists.",
+    lead: "Manche stehen auf Bühnen. Andere gründen Unternehmen, schliessen Deals ab oder wissen einfach, wie sie reisen wollen. Wer auch immer hinten sitzt: Wir fahren einen Artist.",
+    lead2: "Was unterwegs passiert, bleibt off record – ausser Sie entscheiden anders.",
+    s1h: "Der Artist-Standard",
+    s1p: "Artists reisen nach Zeitplänen, in denen nichts schiefgehen darf. Genau daran misst sich Off Record: Ihr Flug wird verfolgt, das Auto ist da, bevor Sie landen, und Sie warten nie auf uns – auch nicht um 4 Uhr früh.",
+    s2h: "Für Veranstalter & Clubs",
+    s2p: "Wir übernehmen jede Artist-Fahrt der Nacht: Flughafen, Hotel, Venue und zurück. Ein Ansprechpartner für Ihr Team, ein Ablaufplan pro Artist, Live-Standort und ein Ersatzfahrer auf Abruf.",
+    s3h: "Für andere Artists",
+    s3p: "Geschäftsreisen, Ferien, Clubabende, Festivals oder ein besonderer Anlass. Zürich, St. Moritz, überall in der Schweiz und über die Grenze hinaus – derselbe Standard bei jeder Fahrt.",
+    closing: "Sie planen die Saison 2027? Sprechen wir, bevor der erste Flug landet.",
+    footer: "Off Record Private Chauffeurs · Zürich"
+  },
+  it: {
+    contact: "Contatto",
+    eyebrow: "Zurigo · Engadina · Lancio nell'estate 2027",
+    h1: "Portiamo solo artisti.",
+    lead: "Alcuni calcano i palchi. Altri costruiscono aziende, chiudono accordi o sanno semplicemente come vogliono arrivare. Chiunque sieda dietro: portiamo un artista.",
+    lead2: "Ciò che accade durante il viaggio resta off record – a meno che non decidiate altrimenti.",
+    s1h: "Lo standard degli artisti",
+    s1p: "Gli artisti viaggiano con programmi in cui nulla può andare storto. Su questo standard è costruito Off Record: il vostro volo è monitorato, l'auto è lì prima che atterriate e non dovete mai aspettarci – nemmeno alle 4 del mattino.",
+    s2h: "Per promoter e locali",
+    s2p: "Ci occupiamo di ogni spostamento degli artisti durante la serata: aeroporto, hotel, location e ritorno. Un unico referente per il vostro team, un programma per ogni artista, posizione in tempo reale e un autista di riserva sempre disponibile.",
+    s3h: "Per altri artisti",
+    s3p: "Viaggi d'affari, vacanze, serate in club, festival o un'occasione speciale. Zurigo, St. Moritz, ovunque in Svizzera e oltre confine – lo stesso standard a ogni corsa.",
+    closing: "State pianificando la stagione 2027? Parliamone prima che atterri il primo volo.",
+    footer: "Off Record Private Chauffeurs · Zurigo"
+  },
+  fr: {
+    contact: "Contact",
+    eyebrow: "Zurich · Engadine · Lancement à l'été 2027",
+    h1: "Nous ne conduisons que des artistes.",
+    lead: "Certains montent sur scène. D'autres bâtissent des entreprises, concluent des affaires ou savent simplement comment ils veulent arriver. Quelle que soit la personne à l'arrière, nous conduisons un artiste.",
+    lead2: "Ce qui se passe en route reste off record – sauf si vous en décidez autrement.",
+    s1h: "Le standard artiste",
+    s1p: "Les artistes voyagent selon des plannings où rien ne doit déraper. C'est sur ce standard qu'Off Record est construit : votre vol est suivi, la voiture est là avant votre atterrissage et vous ne nous attendez jamais, pas même à 4 heures du matin.",
+    s2h: "Pour promoteurs & lieux",
+    s2p: "Nous prenons en charge chaque trajet d'artiste de la soirée : aéroport, hôtel, salle et retour. Un seul interlocuteur pour votre équipe, un planning par artiste, la localisation en direct et un chauffeur de réserve disponible.",
+    s3h: "Pour les autres artistes",
+    s3p: "Voyages d'affaires, vacances, soirées en club, festivals ou une occasion spéciale. Zurich, Saint-Moritz, partout en Suisse et au-delà des frontières – le même standard à chaque trajet.",
+    closing: "Vous préparez la saison 2027 ? Parlons-en avant l'atterrissage du premier vol.",
+    footer: "Off Record Private Chauffeurs · Zurich"
+  }
+  // Rätoromanisch (Puter) folgt, sobald ein Muttersprachler den Text geprüft hat.
+};
+var LEGAL = {
+  en: { link: "Imprint & Privacy", imprint: "Imprint", place: "8008 Zurich, Switzerland", privacy: "Privacy", privacyText: "This website sets no cookies and uses no tracking or analytics. Fonts are loaded from this website itself, not from third parties. To deliver the page, our hosting provider technically processes your IP address. If you contact us by email or phone, we use your details only to answer your enquiry and do not pass them on." },
+  de: { link: "Impressum & Datenschutz", imprint: "Impressum", place: "8008 Zürich, Schweiz", privacy: "Datenschutz", privacyText: "Diese Website setzt keine Cookies und verwendet weder Tracking noch Analyse-Tools. Die Schriften werden von dieser Website selbst geladen, nicht von Dritten. Damit die Seite angezeigt werden kann, verarbeitet unser Hosting-Anbieter technisch bedingt Ihre IP-Adresse. Wenn Sie uns per E-Mail oder Telefon kontaktieren, verwenden wir Ihre Angaben nur zur Beantwortung Ihrer Anfrage und geben sie nicht weiter." },
+  it: { link: "Note legali & Privacy", imprint: "Note legali", place: "8008 Zurigo, Svizzera", privacy: "Privacy", privacyText: "Questo sito non utilizza cookie né strumenti di tracciamento o di analisi. I caratteri vengono caricati dal sito stesso e non da terzi. Per mostrare la pagina, il nostro provider di hosting elabora tecnicamente il vostro indirizzo IP. Se ci contattate via e-mail o telefono, utilizziamo i vostri dati solo per rispondere alla vostra richiesta e non li trasmettiamo a terzi." },
+  fr: { link: "Mentions légales & Confidentialité", imprint: "Mentions légales", place: "8008 Zurich, Suisse", privacy: "Confidentialité", privacyText: "Ce site n'utilise ni cookies ni outils de suivi ou d'analyse. Les polices sont chargées depuis ce site et non depuis des tiers. Pour afficher la page, notre hébergeur traite techniquement votre adresse IP. Si vous nous contactez par e-mail ou par téléphone, nous utilisons vos données uniquement pour répondre à votre demande et ne les transmettons pas." }
+};
+var CARD = {
+  en: { role: "Founder", close: "Close" },
+  de: { role: "Gründer", close: "Schliessen" },
+  it: { role: "Fondatore", close: "Chiudi" },
+  fr: { role: "Fondateur", close: "Fermer" }
+};
+var LANGS = [["en","EN","English"],["de","DE","Deutsch"],["it","IT","Italiano"],["fr","FR","Français"]];
+
+function setLang(id) {
+  var t = COPY[id], l = LEGAL[id], c = CARD[id];
+  document.documentElement.lang = id;
+  document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = t[el.dataset.i18n]; });
+  document.querySelectorAll("[data-l]").forEach(function (el) { el.textContent = l[el.dataset.l]; });
+  document.querySelectorAll("[data-c]").forEach(function (el) {
+    if (el.dataset.c === "close") el.setAttribute("aria-label", c.close); else el.textContent = c[el.dataset.c];
+  });
+  document.getElementById("legal").setAttribute("aria-label", l.link);
+  document.getElementById("card").setAttribute("aria-label", "Off Record – " + t.contact);
+  document.querySelectorAll(".langs button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === id ? "true" : "false"); });
+}
+
+document.querySelectorAll(".langs").forEach(function (nav) {
+  LANGS.forEach(function (x) {
+    var b = document.createElement("button");
+    b.type = "button"; b.dataset.lang = x[0]; b.textContent = x[1]; b.setAttribute("aria-label", x[2]);
+    b.addEventListener("click", function () { setLang(x[0]); });
+    nav.appendChild(b);
+  });
+});
+
+var lastFocus = null;
+function openOverlay(id) {
+  lastFocus = document.activeElement;
+  var o = document.getElementById(id);
+  o.hidden = false;
+  document.body.style.overflow = "hidden";
+  o.querySelector(".close").focus();
+}
+function closeOverlays() {
+  document.querySelectorAll(".overlay").forEach(function (o) { o.hidden = true; });
+  document.body.style.overflow = "";
+  if (lastFocus) lastFocus.focus();
+}
+document.querySelectorAll("[data-open]").forEach(function (b) { b.addEventListener("click", function () { openOverlay(b.dataset.open); }); });
+document.querySelectorAll("[data-close]").forEach(function (b) { b.addEventListener("click", closeOverlays); });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeOverlays(); });
+
+setLang("en");
+</script>
+</body>
+</html>
